@@ -1,0 +1,7 @@
+nome = input('Qual o seu nome? ')
+print('Seu nome toda em maiuscula é {}'.format(nome.upper()))
+print('Seu nome toda em minuscula é {}'.format(nome.lower()))
+dividido = nome.split()
+junto = ''.join(dividido)
+print('Seu nome tem {} letras'.format(len(junto)))
+print('Seu primeiro nome tem {} letras'.format(len(dividido[0])))
