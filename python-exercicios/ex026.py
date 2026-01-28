@@ -1,2 +1,2 @@
-frase = input('Digite uma frase: ')
-print('A letra "A" aparece {} vezes'.format(frase.lower().count('a')))
+frase = input('Digite uma frase: ').lower().strip()
+print('A letra "A" aparece {} vezes \nA primeira letra A apareceu na posição {} \nA última letra A apareceu na posição {}'.format(frase.count('a'), frase.find('a')+1,frase.rfind('a')+1))

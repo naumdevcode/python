@@ -1,3 +1,3 @@
-cid = input('Digite o nome de uma cidade: ')
+cid = input('Digite o nome de uma cidade: ').strip()
 div = cid.lower().split()
-print('Essa cidade começa com "SANTO": {}'.format('santo' in div[0]))
+print(cid, 'santo' in div[0])
