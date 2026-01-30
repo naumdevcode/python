@@ -1,7 +1,13 @@
-import random
-ran = random.randint(0,5)
-num = int(input('Adivinhe o meu número: '))
-if num == ran: 
-    print('Você acertou, PARABÉNS!')
+from random import randint
+from time import sleep
+computador = randint(0,5)
+print('-=-' * 20)
+print('Vou pensar em um número entre 0 e 5. Tente adivinhar...')
+print('-=-' * 20)
+jogador = int(input('Em que número eu pensei? '))
+print('PROCESSANDO...')
+sleep(3)
+if jogador == computador: 
+    print('PARABÉNS! Você conseguiu me vencer!')
 else:
-    print('Você errou! o número era {}'.format(ran))
+    print('GANHEI! Eu pensei no número {} e nâo no {}'.format(computador, jogador))

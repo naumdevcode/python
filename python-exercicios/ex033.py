@@ -1,6 +1,15 @@
-n1 = float(input('Digite um número: '))
-n2 = float(input('Digite outro número: '))
-n3 = float(input('Digite mais um número: '))
-if n1 < n2 | n1 < n3:
-    maior = n1
-else if n2 < n1 | n2 < n3:
+a = int(input('Digite um número: '))
+b = int(input('Digite outro número: '))
+c = int(input('Digite mais um número: '))
+menor = a 
+if b < a and b < c:
+    menor = b
+if c < a and c < b:
+    menor = c
+maior = a 
+if b > a and b > c:
+    maior = b
+if c > a and c > b:
+    maior = c
+print('O menor valor digitado foi {}'.format(menor))
+print('O maior valor digitado foi {}'.format(maior))
