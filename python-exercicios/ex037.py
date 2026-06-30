@@ -1,8 +1,15 @@
-num = int(input('Digite um número: '))
-conv = int(input('1 - Binário \n2 - Octal \n3 - Hexadecimal \nEscolha qual será a base de conversão: '))
+num = int(input('Digite um número interio: '))
+print('''Escolha uma das bases para conversão
+[ 1 ] converter para BINÁRIO
+[ 2 ] converter para OCTAL
+[ 3 ] converter para HEXADECIMAL''')
+opcao = int(input('Sua opção: '))
 
-if conv >= 1 and conv <=3:
-    print(f'{num}')
-    print(f'{conv}')
+if opcao == 1:
+    print(f'{num} convertido para BINÁRIO é igual a {bin(num)[2:]}')
+elif opcao == 2:
+    print(f'{num} convertido para OCTAL é igual a {oct(num)[2:]}')
+elif opcao == 3:
+    print(f'{num} convertido para HEXADECIMAL é igual a {hex(num)[2:]}')
 else:
-    print('[ERRO]')
+    print('Opção inválida. Tente novamente. ')
