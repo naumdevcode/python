@@ -1,15 +1,17 @@
-from datetime import datetime
-nasc = int(input('Em que ano você nasceu? '))
-print()
-
-ano = datetime.now().year
-idade = ano - nasc
-
+from datetime import date
+atual = date.today().year
+nasc = int(input('Ano de nascimento: '))
+idade = atual - nasc
+print(f'Quem nasceu em {nasc} tem {idade} anos em {atual}.')
 if idade < 18:
-    prazo = 18 - idade
-    print(f'Você não precisa se alistar. Ainda faltam {prazo} anos.')
+    saldo = 18 - idade
+    print(f'Ainda faltam {saldo} anos para o alistamento.')
+    ano = atual + saldo 
+    print(f'Seu alistamento será em {ano}.')
 elif idade == 18:
-    print('Você deve se alistar esse ano.')
+    print('Você tem que se alistar IMEDIATAMENTE!.')
 else:
-    prazo = idade - 18
-    print(f'Você já passou {prazo} anos do tempo de se alistar.')
+    saldo = idade - 18
+    print(f'Você já deveria ter se alistado há {saldo} anos.')
+    ano = atual - saldo
+    print(f'Seu alistamento foi em {ano}.')
