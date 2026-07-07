@@ -1,16 +1,16 @@
-from datetime import datetime
-ano = int(input('Seu ano de nascimento: '))
-idade = datetime.now().year - ano
+from datetime import date
+ano = int(input('Ano de nascimento: '))
+idade = date.today().year - ano
 def categoria(id):
-    if id < 10:
+    if id <= 9:
         return 'MIRIM'
-    elif id < 15:
+    elif id <= 14:
         return 'INFANTIL'
-    elif id < 20:
+    elif id <= 19:
         return 'JUNIOR'
-    elif id < 21:
+    elif id <= 25:
         return 'SÊNIOR'
     else:
         return 'MASTER'
-print()
-print(f'Você tem {idade} anos, sua categoria é {categoria(idade)}')
+print(f'O atleta tem {idade} anos.')
+print(f'Classificação: {categoria(idade)}')

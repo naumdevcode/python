@@ -1,7 +1,6 @@
-r1 = float(input('Digite o tamanho da uma reta: '))
-r2 = float(input('Digite o tamanho de outra reta: '))
-r3 = float(input('Digite o tamanho de mais outra reta: '))
-print()
+r1 = float(input('Primeiro segmento: '))
+r2 = float(input('Segundo segmento: '))
+r3 = float(input('Terceiro segmento: '))
 def isTriangulo():
     if (r1 + r2 > r3) and (r2 + r3 > r1) and (r3 + r1 > r2):
         return True
@@ -15,6 +14,6 @@ def formTriangulo():
     else:
         return 'ESCALENO'
 if isTriangulo():
-    print(f'Isso é um triangulo {formTriangulo()}.')
+    print(f'Os segmentos acima PODEM FORMAR um triângulo {formTriangulo()}.')
 else:
-    print('Isso não é um tringulo.')
+    print('Os segmentos acima NÃO PODEM FORMAR triângulo.')
