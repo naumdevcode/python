@@ -1,31 +1,27 @@
 from random import randint
-print('------VAMOS JOGAR------')
-bot = randint(1,3)
-player = int(input('''1 - PEDRA
-2 - PAPEL
-3 - TESOURA
-Qual você escolhe: '''))
-    
-if bot == 1:
-    gbot = 'PEDRA'
-elif bot == 2:
-    gbot = 'PAPEL'
-elif bot == 3:
-    gbot = 'TESOURA'
-
-if player == 1:
-    gplayer = 'PEDRA'
-elif   player == 2:
-    gplayer = 'PAPEL'
-elif   player == 3:
-    gplayer = 'TESOURA'
-
-print(f'Eu escolho: {gbot}')
-print(f'Você escolheu: {gplayer}')
-
-if bot == player:
-    print('EMPATAMOS!')
-elif (bot == 1 and player == 3) or (bot == 2 and player == 1) or (bot == 3 and player == 2):
-    print('VOCÊ PERDEU!')
+from time import sleep
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0,2)
+print('''Suas opções:
+[ 0 ] - PEDRA
+[ 1 ] - PAPEL
+[ 2 ] - TESOURA''')
+jogador = int(input('Qual sua jogada? '))
+if jogador > 2:
+    print('JOGADA INVÁLIDA. tente novamente')
 else:
-    print('VOCÊ GANHOU!')
+    print('JO')
+    sleep(1)
+    print('KEN')
+    sleep(1)
+    print('PO!!!')
+    print('-=' * 12)
+    print(f'Computador jogou {itens[computador]}')
+    print(f'Jogador jogou {itens[jogador]}')
+    print('-=' * 12)
+    if computador == jogador:
+        print('EMPATE')
+    elif (computador == 0 and jogador == 2) or (computador == 1 and jogador == 0) or (computador == 2 and jogador == 1):
+        print('COMPUTADOR VENCE')
+    else:
+        print('JOGADOR VENCE')
