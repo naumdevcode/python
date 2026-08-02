@@ -1,5 +1,7 @@
-n = int(input('Digite um número: '))
-r = int(input('Digite outro número: '))
+print(f"{' 10 TERMOS DE UMA PA '.center(40, '=')}")
+num = int(input('Primeiro termo: '))
+raz = int(input('Razão: '))
 for c in range(1,11):
-    print(n,end=', ')
-    n += r
+    print(num,end=' → ')
+    num += raz
+print('ACABOU')

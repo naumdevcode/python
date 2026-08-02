@@ -1,10 +1,11 @@
-frase = str(input('Digite uma frase: ')).strip().lower().split()
-frase = ''.join(frase)
-n = len(frase)
-pfrase = ''
-for c in range(n-1,-1,-1):
-    pfrase += frase[c]
-if frase == pfrase:
-    print(f'Essa frase é um palidromo, {pfrase}')
+frase_original = str(input('Digite uma frase: ')).strip().upper()
+frase_junta = ''.join(frase_original.split())
+frase_contrario = frase_junta[::-1]
+'''frase_contrario = ''
+for c in range(len(frase_junta)-1,-1,-1):
+    frase_contrario += frase_junta[c]'''
+print(F'O inverso de {frase_original} é {frase_contrario}')
+if frase_junta == frase_contrario:
+    print(f'Temos um palidromo!')
 else:
-    print(f'Essa frase não é um palidromo')
+    print(f'A frase digitada não é um palidromo!')
