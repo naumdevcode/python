@@ -1,14 +1,14 @@
-cadastro = []
+cadastro = [] # Isso é uma lista
 soma_idades = 0
 maior_idade_homem = 0
 nome_homem_mais_velho = ''
 total_mulheres_jovens = 0
 for c in range(1, 5):
-    print(f"--- {c}ª PESSOA ---")
+    print(f"----- {c}ª PESSOA -----")
     pessoa = {  # Criamos o dicionário primeiro
-        'nome': str(input('Seu nome: ')).strip().title(),
-        'idade': int(input('Sua idade: ')),
-        'sexo': str(input('Seu sexo [M/F]: ')).strip().upper()[0]
+        'nome': str(input('Nome: ')).strip().title(),
+        'idade': int(input('Idade: ')),
+        'sexo': str(input('Sexo [M/F]: ')).strip().upper()[0] # Pega só a primeira letra
     }
     cadastro.append(pessoa) # Adicionamos na lista
     soma_idades += pessoa['idade']  # Processamento dos dados usando a variável 'pessoa'
@@ -19,10 +19,9 @@ for c in range(1, 5):
         total_mulheres_jovens += 1
 media_idades = soma_idades / len(cadastro)
 print('\n' + '='*40)
-print(f'A média de idade do grupo é {media_idades:.1f} anos.')
+print(f'A média de idade do grupo é de {media_idades:.1f} anos.')
 if nome_homem_mais_velho:   # Tratamento para o caso de não haver homens cadastrados
-    print(f'O homem mais velho é {nome_homem_mais_velho} com {maior_idade_homem} anos.')
+    print(f'O homem mais velho tem {maior_idade_homem} anos e se chama {nome_homem_mais_velho}.')
 else:
     print('Não foi cadastrado nenhum homem no grupo.')
-
-print(f'Ao todo temos {total_mulheres_jovens} mulher(es) com menos de 20 anos.')
+print(f'Ao todo são {total_mulheres_jovens} mulher(es) com menos de 20 anos.')
